@@ -48,6 +48,21 @@ class JpaApplicationTests {
     }
 
     @Test
+    void findBookById(){
+        System.out.println(bookDao.findBookById(2));
+    }
+
+    @Test
+    void findBooksByIdGreaterThanEqual(){
+        System.out.println(bookDao.findBooksByIdGreaterThanEqual(2));
+    }
+
+    @Test
+    void findBookByIdLessThanEqual(){
+        System.out.println(bookDao.findBookByIdLessThanEqual(2));
+    }
+
+    @Test
     void save() {
         Book save = bookDao.save(new Book("name", "author"));
         System.out.println(save);
