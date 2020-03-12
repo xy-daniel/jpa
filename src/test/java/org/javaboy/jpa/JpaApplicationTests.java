@@ -85,4 +85,10 @@ class JpaApplicationTests {
         bookDao.deleteById(1);
     }
 
+    @Test
+    void addBook(){
+        System.out.println(bookDao.addBook0("鲁迅0", "朝花夕拾0"));
+        System.out.println(bookDao.addBook("鲁迅1", "朝花夕拾1"));
+    }
+
 }
