@@ -69,6 +69,12 @@ class JpaApplicationTests {
     }
 
     @Test
+    void getMaxIdBook(){
+        Book maxIdBook = bookDao.getMaxIdBook();
+        System.out.println(maxIdBook);
+    }
+
+    @Test
     void update() {
         Book save = bookDao.save(new Book(1,"nameUpdate", "author"));
         System.out.println(save);
